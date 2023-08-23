@@ -2,18 +2,22 @@
 
 
 <h2>Description</h2>
-I setup Azure Sentinel (SIEM) and connect it to a live virtual machine acting as a honey pot to observe live attacks (RDP Brute Force) from all around the world. And I mapped the attacks on Azure Sentinel Map
+I setup Microsoft Sentinel (SIEM) and connected it to a live virtual machine acting as a honey pot to observe live attacks (RDP Brute Force) from all around the world. And I mapped the attacks on Azure Sentinel Map
 <br />
 
 
 <h2>Languages and Utilities Used</h2>
 
 - <b>Powershell</b> 
-- <b>/b>
+- <b>Azure Virtual Machine</b>
+- <b>Microsoft Sentinel</b>
+- <b>Kusto Query Language - KQL</b>
+
+
 
 <h2>Environments Used </h2>
 
-- <b>Windows 11</b> 
+- <b>Microsoft Azure Subscription</b> 
 
 <h2>Program walk-through:</h2>
 

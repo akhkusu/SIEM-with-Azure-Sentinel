@@ -22,21 +22,26 @@ I setup Microsoft Sentinel (SIEM) and connected it to a live virtual machine act
 <h2>Program walk-through:</h2>
 
 <p align="center">
-First, I created a Python script for Diffie-Hellman Key Exchange Algorithm
+Created a Windows Virtual Machine (VM) within my Azure subscription and configured the VM to act as a honeypot. 
+Then I executed a PowerShell script on the honeypot to extract failed Remote Desktop Protocol (RDP) login attempts.
   <br/>
-<img src="img/Screenshot 2023-08-22 161239.png" height="80%" width="80%" alt="without_rsa_module"/>
+<img src="img/Screenshot 2023-08-23 165903.png" height="80%" width="80%" alt="without_rsa_module"/>
 <br />
 <br />
 <br />
 <br />
-Second, I created another script that simulates Man-In-The_Middle-Attack <br/>
-<img src="img/Screenshot 2023-08-22 161259.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Integrated the honeypot VM with Azure Log Analytics Workspace.
+Configured the PowerShell script to collect and send logs related to failed RDP login attempts to the Log Analytics Workspace.
+Used the API from ipgeolocation.io to get the geological location of the attackers.<br/>
+<img src="img/Screenshot 2023-08-23 171829.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+ <img src="img/Screenshot 2023-08-23 171029.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
 <br />
 <br />
 <br />
 <br />
-Lastly, I added the RSA signing function on the first script to see how Diffie-Hellman Key Exchange and RSA signature are used together<br/>
-<img src="img/Screenshot 2023-08-22 161312.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Utilized Microsoft Sentinel workbook to display the global attack data(RDP brute force) on a world map according to the physical location and thr magnitude of attacks
+<img src="img/Screenshot 2023-08-23 171309.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 </p>
 
